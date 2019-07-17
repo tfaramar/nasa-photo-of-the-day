@@ -1,15 +1,14 @@
 import React from "react";
 import "./App.css";
-import "./Components/APODgrid.js";
+import APODcard from "./Components/APODcard.js";
 
 function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        NASA Photo of the Day:
       </p>
-      <APODgrid />
+      <APODcard />
     </div>
   );
 }
