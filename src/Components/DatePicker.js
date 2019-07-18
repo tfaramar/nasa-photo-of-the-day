@@ -17,7 +17,7 @@ function formatDate(date) {
 export default function DatePicker({setDate}) {
     return (
       <div>
-        <p>Please type a day:</p>
+        <h3>Show me the universe on:</h3>
         <DayPickerInput onDayChange={day => setDate(formatDate(day))} />
       </div>
     );

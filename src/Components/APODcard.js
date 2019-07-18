@@ -7,7 +7,8 @@ function APODcard(){
 
     const [image, setImage] = useState("");
     const [explanation, setExplanation] = useState("");
-    const [date, setDate] = useState('2012-03-14');
+    const [date, setDate] = useState("");
+    const [title, setTitle] = useState("");
     
 
     useEffect(() => {
@@ -21,19 +22,19 @@ function APODcard(){
                 const imgDescrip = (response.data.explanation);
                 console.log(imgDescrip);
                 setExplanation(imgDescrip);
+                const title = (response.data.title);
+                setTitle(title);
             })
             .catch(error => {
                 console.log(error);
-        }, [date]);
-    })
+        })
+    }, [date]);
    
     return (
         <div className = "apodCard">
-            <p>
-                NASA Photo of the Day: {date}
-            </p>
             <DatePicker setDate={setDate}/>
             <NasaPhoto imgUrl={image}/>
+            <h2> {title} </h2>
             <p> {explanation} </p>
         </div>
         
