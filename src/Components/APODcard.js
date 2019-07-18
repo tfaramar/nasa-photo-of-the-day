@@ -2,6 +2,29 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NasaPhoto from "./NasaPhoto";
 import DatePicker from "./DatePicker";
+import styled from "styled-components";
+
+const WrapperDiv = styled.div`
+  color: #142834;
+  margin: 10px 30px 10px 30px;
+  text-align: left;
+`
+const BottomDiv = styled.div`
+    display: flex;
+    margin: 10px 0 70px 0;
+`
+const Title = styled.h2`
+    width: 25%;
+    margin: 5px;
+`
+const Descrip = styled.p`
+    width: 75%;
+    margin: 5px;
+`
+const Footer = styled.p`
+    font-size: 0.8rem;
+    text-align: center;
+`
 
 function APODcard(){
 
@@ -31,14 +54,20 @@ function APODcard(){
     }, [date]);
    
     return (
-        <div className = "apodCard">
+        <WrapperDiv>
             <DatePicker setDate={setDate}/>
             <NasaPhoto imgUrl={image}/>
-            <h2> {title} </h2>
-            <p> {explanation} </p>
-        </div>
+            <BottomDiv>
+                <Title> {title} </Title>
+                <Descrip> {explanation} </Descrip>
+            </BottomDiv>
+            <Footer>
+                <p> Data provided by the National Aeronautics and Space Administration.</p>
+            </Footer>
+        </WrapperDiv>
         
     )
 }
 
 export default APODcard;
+
