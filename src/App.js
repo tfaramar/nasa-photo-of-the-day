@@ -5,9 +5,6 @@ import APODcard from "./Components/APODcard.js";
 function App() {
   return (
     <div className="App">
-      <p>
-        NASA Photo of the Day:
-      </p>
       <APODcard />
     </div>
   );
