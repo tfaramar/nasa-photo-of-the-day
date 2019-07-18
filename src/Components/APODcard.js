@@ -4,6 +4,7 @@ import NasaPhoto from "./NasaPhoto";
 import DatePicker from "./DatePicker";
 import styled from "styled-components";
 
+
 const WrapperDiv = styled.div`
   color: #142834;
   margin: 10px 30px 10px 30px;
@@ -11,10 +12,10 @@ const WrapperDiv = styled.div`
 `
 const BottomDiv = styled.div`
     display: flex;
-    margin: 10px 0 70px 0;
+    margin: 20px 0 70px 0;
 `
 const Title = styled.h2`
-    width: 25%;
+    width: 23%;
     margin: 5px;
 `
 const Descrip = styled.p`

@@ -7,6 +7,9 @@ const DateDiv = styled.div`
     display: flex;
     flex-direction: row;
 `
+const MainTitle = styled.h1`
+    font-size: 3rem;
+`
 
 function formatDate(date) {
     var d = new Date(date),
@@ -23,7 +26,7 @@ function formatDate(date) {
 export default function DatePicker({setDate}) {
     return (
       <DateDiv>
-        <h1>Show me the universe on:  </h1>
+        <MainTitle>Show me the universe on:  </MainTitle>
         <DayPickerInput onDayChange={day => setDate(formatDate(day))} />
       </DateDiv>
     );
