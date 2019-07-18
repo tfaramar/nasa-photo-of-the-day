@@ -17,13 +17,17 @@ const BottomDiv = styled.div`
 const Title = styled.h2`
     width: 23%;
     margin: 5px;
+    font-size: 2rem;
 `
 const Descrip = styled.p`
     width: 75%;
+    padding: 10px;
     margin: 5px;
+    font-size: 1.5rem;
+    border-left: solid 1px #ddab52;
 `
 const Footer = styled.p`
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
 `
 

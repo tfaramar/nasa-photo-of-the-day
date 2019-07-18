@@ -6,9 +6,11 @@ import styled from "styled-components";
 const DateDiv = styled.div`
     display: flex;
     flex-direction: row;
+    align-items: center;
 `
 const MainTitle = styled.h1`
     font-size: 3rem;
+    margin-right: 10px;
 `
 
 function formatDate(date) {
