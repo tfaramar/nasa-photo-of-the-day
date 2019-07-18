@@ -5,15 +5,14 @@ import DatePicker from "./DatePicker";
 
 function APODcard(){
 
-    const [image, setImage] = useState('');
-    const [explanation, setExplanation] = useState('');
+    const [image, setImage] = useState("");
+    const [explanation, setExplanation] = useState("");
     const [date, setDate] = useState('2012-03-14');
     
 
     useEffect(() => {
         //request info from server and add useEffect to prevent rerendering
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=y54CZckTolqCojW2qsO0J497f2bsh3yFgzEjyKkf&date=${date}`)
-            //respond
             .then(response => {
                 console.log(response.data);
                 const imgUrl = (response.data.hdurl);
@@ -23,10 +22,9 @@ function APODcard(){
                 console.log(imgDescrip);
                 setExplanation(imgDescrip);
             })
-            //reject
             .catch(error => {
                 console.log(error);
-        });
+        }, [date]);
     })
    
     return (
